@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { LayoutDashboard, Download, RefreshCcw, Activity, Globe, Key, Lock, Shield, AlertCircle, Languages } from 'lucide-react';
+import { LayoutDashboard, RefreshCcw, Activity, Globe, Key, Lock, Shield, AlertCircle, Languages } from 'lucide-react';
 import { MarketCard } from './components/MarketCard';
 import { SentimentGauge } from './components/SentimentGauge';
 import { TelegramGenerator } from './components/TelegramGenerator';
@@ -10,7 +10,6 @@ import { SmartCalculator } from './components/SmartCalculator';
 import { WhaleScanner } from './components/WhaleScanner';
 import { NodeHealth } from './components/NodeHealth';
 import { fetchMarketOverview, fetchMarketSentiment } from './services/geminiService';
-import { exportProjectToZip } from './services/zipService';
 import { CoinData, MarketSentiment, Language } from './types';
 import { translations } from './translations';
 
@@ -177,15 +176,6 @@ const App: React.FC = () => {
               <span className="text-lg font-bold text-white sm:hidden">CIP</span>
             </div>
             <div className="flex items-center gap-3">
-              <button 
-                 onClick={exportProjectToZip}
-                 className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors shadow-lg shadow-blue-900/20"
-                 title={t.export}
-              >
-                <Download size={14} />
-                <span className="hidden sm:inline">ZIP</span>
-              </button>
-
               <button 
                 onClick={toggleLanguage}
                 className="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-3 py-1.5 rounded-lg text-xs font-bold transition-colors border border-slate-700"

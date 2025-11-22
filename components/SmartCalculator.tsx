@@ -140,42 +140,42 @@ export const SmartCalculator: React.FC<SmartCalculatorProps> = ({ lang }) => {
                 </div>
             </div>
         ) : (
-            /* Empty State Content - Condensed */
-            <div className="animate-fade-in space-y-3">
-               <div className="bg-slate-900/50 rounded p-3 border border-slate-800">
-                  <h4 className="text-xs font-bold text-slate-300 mb-2 flex items-center gap-2">
-                     <BookOpen size={14} className="text-blue-400"/>
-                     {lang === 'ru' ? 'Правила Инвестора' : 'Investor Rules'}
+            /* Empty State Content - Condensed into Grid */
+            <div className="animate-fade-in grid grid-cols-2 gap-2">
+               <div className="bg-slate-900/50 rounded p-2 border border-slate-800">
+                  <h4 className="text-[10px] font-bold text-slate-300 mb-1.5 flex items-center gap-1">
+                     <BookOpen size={12} className="text-blue-400"/>
+                     {lang === 'ru' ? 'Советы' : 'Tips'}
                   </h4>
-                  <ul className="space-y-1.5 text-[11px] text-slate-400">
-                     <li className="flex gap-2 items-start">
+                  <ul className="space-y-1 text-[10px] text-slate-400">
+                     <li className="flex gap-1 items-start">
                         <span className="text-blue-500">•</span>
-                        {lang === 'ru' ? 'Не кладите все яйца в одну корзину.' : 'Don\'t put all eggs in one basket.'}
+                        {lang === 'ru' ? 'Не все яйца в одну корзину' : 'Diversify assets'}
                      </li>
-                     <li className="flex gap-2 items-start">
+                     <li className="flex gap-1 items-start">
                         <span className="text-blue-500">•</span>
-                        {lang === 'ru' ? 'Покупайте частями (DCA).' : 'Buy in parts (DCA).'}
+                        {lang === 'ru' ? 'Покупай частями (DCA)' : 'Use DCA strategy'}
                      </li>
                   </ul>
                </div>
 
-               <div className="bg-slate-900/50 rounded p-3 border border-slate-800">
-                  <div className="flex justify-between items-center mb-2">
-                    <h4 className="text-xs font-bold text-slate-300 flex items-center gap-2">
-                        <ShieldAlert size={14} className="text-yellow-400"/> Types
+               <div className="bg-slate-900/50 rounded p-2 border border-slate-800">
+                  <div className="flex justify-between items-center mb-1.5">
+                    <h4 className="text-[10px] font-bold text-slate-300 flex items-center gap-1">
+                        <ShieldAlert size={12} className="text-yellow-400"/> Types
                     </h4>
                   </div>
                   
-                  <div className="space-y-2">
-                     <div className="flex items-center justify-between text-[10px]">
+                  <div className="space-y-1.5">
+                     <div className="flex items-center justify-between text-[9px]">
                         <span className="text-emerald-400 font-medium">Safe</span>
-                        <div className="w-24 bg-slate-800 h-1 rounded-full overflow-hidden">
+                        <div className="w-12 bg-slate-800 h-1 rounded-full overflow-hidden">
                             <div className="bg-emerald-500 h-full" style={{width: '80%'}}></div>
                         </div>
                      </div>
-                     <div className="flex items-center justify-between text-[10px]">
+                     <div className="flex items-center justify-between text-[9px]">
                         <span className="text-rose-400 font-medium">Degen</span>
-                        <div className="w-24 bg-slate-800 h-1 rounded-full overflow-hidden">
+                        <div className="w-12 bg-slate-800 h-1 rounded-full overflow-hidden">
                             <div className="bg-rose-500 h-full" style={{width: '90%'}}></div>
                         </div>
                      </div>

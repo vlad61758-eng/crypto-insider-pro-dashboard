@@ -1,5 +1,5 @@
 {
   "name": "CryptoInsider Pro",
-  "description": "Professional dashboard for crypto channel owners. Features real-time market analysis via Google Search Grounding, AI-generated Telegram post creation, and code export capabilities.",
+  "description": "Professional dashboard for crypto channel owners. Features real-time market analysis via Google Search Grounding, AI-generated Telegram post creation.",
   "requestFramePermissions": []
 }
